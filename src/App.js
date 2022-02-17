@@ -19,8 +19,12 @@ function App() {
  {
   Loader ?
    (
-    <HashLoader
-    color={"36D7B7"} loading={Loader} css={''} size={80} />
+    // <HashLoader
+    // color={"36D7B7"} loading={Loader} css={''} size={80} />
+    <div className='loadingicon'>
+      <img src="/anubadak.webp" alt="" />
+      <p>Anubadak</p>
+    </div>
    )
  
    :(<div className='main'>

@@ -1,19 +1,73 @@
-
-body
-{
+body {
     overflow-x: hidden;
 }
-.app
-{
+
+.app {
     display: grid;
     place-items: center;
     height: 100vh;
     width: 100%;
     position: relative;
 }
-.main
-{
-    
+
+.main {
+
     height: 100vh;
     width: 100%;
+}
+
+.loadingicon {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: red; */
+    position: relative;
+}
+
+.loadingicon img {
+    width: 200px;
+    height: 150px;
+    transform: translateY(70%);
+    animation: slide 1.4s ease-in-out forwards;
+    opacity: 0;
+}
+
+.loadingicon p {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #000;
+    letter-spacing: 2px;
+    animation: blink 1s infinite alternate;
+    padding: 20px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+@keyframes blink {
+    from {
+        color: #000;
+        letter-spacing: 2px;
+    }
+
+    to {
+        color: rgb(126, 126, 126);
+        letter-spacing: 4px;
+    }
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+        /* z-index: 2; */
+        transform: scale(1.2);
+    }
 }

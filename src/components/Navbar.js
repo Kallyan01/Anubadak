@@ -12,9 +12,6 @@ export default class Navbar extends Component {
                         <img src="/anubadak.webp" alt="" />
                         <p>Anubadak</p>
                     </div>
-                    <div className="box2">
-                        <div className="products"><i class="fas fa-globe-asia"></i></div>
-                    </div>
                 </div>
     
         )
